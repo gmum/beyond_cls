@@ -8,13 +8,13 @@
 
 ## Overview
 
-Masked Image Modeling (MIM) has emerged as a popular method for Self-Supervised Learning (SSL) of visual representations. 
-However, for high-level perception tasks, MIM-pretrained models offer lower out-of-the-box representation quality than the Joint-Embedding Architectures (JEA) -- another prominent SSL paradigm. 
-To understand this performance gap, we analyze the information flow in Vision Transformers (ViT) learned by both approaches. 
-We reveal that whereas JEAs construct their representation on a selected set of relevant image fragments, MIM models aggregate nearly whole image content. 
-Moreover, we demonstrate that MIM-trained ViTs retain valuable information within their patch tokens, which is not effectively captured by the global [cls] token representations. 
-Therefore, selective aggregation of relevant patch tokens, without any fine-tuning, results in consistently higher-quality of MIM representations. 
-To our knowledge, we are the first to highlight the lack of effective representation aggregation as an emergent issue of MIM and propose directions to address it, contributing to future advances in Self-Supervised Learning.
+Masked Image Modeling (MIM) has emerged as a promising approach for Self-Supervised Learning (SSL) of visual representations. 
+However, the out-of-the-box performance of MIMs is typically inferior to competing approaches. 
+Most users cannot afford fine-tuning due to the need for large amounts of data, high GPU consumption, and specialized user knowledge. 
+Therefore, the practical use of MIM representations is limited. In this paper we ask what is the reason for the poor out-of-the-box performance of MIMs. 
+Is it due to weaker features produced by MIM models, or is it due to suboptimal usage? 
+Through detailed analysis, we show that attention in MIMs is spread almost uniformly over many patches, leading to ineffective aggregation by the [cls] token. 
+Based on this insight, we propose Selective aggregation to better capture the rich semantic information retained in patch tokens, which significantly improves the out-of-the-box performance of MIM.
 
 These scripts are based on the [official MAE codebase](https://github.com/facebookresearch/mae).
 
@@ -64,15 +64,13 @@ We thank the authors for open-sourcing them.
 
 If you find our work interesting, please cite it:
 
-
 ```
-@misc{przewiezlikowski2024beyondcls,
-      title={Beyond [cls]: Exploring the true potential of Masked Image Modeling representations}, 
-      author={Marcin Przewięźlikowski and Randall Balestriero and Wojciech Jasiński and Marek Śmieja and Bartosz Zieliński},
-      year={2024},
-      eprint={2412.03215},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2412.03215}, 
+@InProceedings{Przewiezlikowski_2025_ICCV,
+    author    = {Przewi\k{e}\'zlikowski, Marcin and Balestriero, Randall and Jasi\'nski, Wojciech and \'Smieja, Marek and Zieli\'nski, Bartosz},
+    title     = {Beyond [cls]: Exploring the True Potential of Masked Image Modeling Representations},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {23442-23452}
 }
 ```
