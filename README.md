@@ -60,6 +60,10 @@ If the value of this argument is not a valid path, the script will look for this
 This codebase is based on the fragments of the official [MAE](https://github.com/facebookresearch/mae), and [SimMIM](https://github.com/microsoft/SimMIM/tree/main) implementations.
 We thank the authors for open-sourcing them.
 
+This research has been supported by the flagship project entitled “Artificial Intelligence Computing Center Core Facility” from the Priority Research Area DigiWorld under
+the Strategic Programme Excellence Initiative at the Jagiellonian University. The research of Marcin Przewięźlikowski was supported by the National Science Centre (Poland),
+grant no. 2023/49/N/ST6/03268. The research of Wojciech Jasiński was supported by the National Science Centre (Poland), grant no. 2022/47/B/ST6/03397. The research of Marek Śmieja was supported by the National Science Centre (Poland), grant no. 2022/45/B/ST6/01117. The research of Bartosz Zieliński was supported by the National Science Centre (Poland), grant no. 2023/50/E/ST6/00469. We gratefully acknowledge Polish high-performance computing infrastructure PLGrid (HPC Center: ACK Cyfronet AGH) for providing computer facilities and support within computational grant no. PLG/2024/017148. We thank Marcin Sendera, Adam Pardyl, Turhan Can Kargin, Bill Psomas, Michał Pietruszka, and Klaudia Bałazy for fruitful discussions and feedback over the course of this work.
+
 ## Citation
 
 If you find our work interesting, please cite it:
